@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 
 int main(){       
     /*
@@ -121,6 +122,57 @@ int main(){
     std::cout << "Unsigned Long Long int: " << unsigned_long_long_int << ", size: " << sizeof (unsigned long long int) << " bytes" << std::endl;
     std::cout << "---------------------------------" << std::endl;
     */
+
+//======================================================//
+
+//Fractional numbers
+
+    //Fixed notation
+    float num1 {1.1234567801234567890f};
+    double num2 {1.12345678901234567890};
+    long double num3 {1.12345678901234567890L};
+    float num4 {192400023.0f};
+    num4 = num4 +1;
+    
+    //Scientific notation
+    double num5 {192400023};
+    double num6 {1.92400023e8};
+    double num7 {1.924e8};
+    double num8 {0.00000000003498};
+    double num9 {3.498e-11};
+    double num10 {5.6};
+    double num11 {};
+    double num12 {};
+
+    //Infinity
+    double result {num10/num11};
+
+    std::cout << "sizeof float: " << sizeof(float) << std::endl;
+    std::cout << "sizeof double: " << sizeof(double) << std::endl;
+    std::cout << "sizeof long double: " << sizeof(long double) << std::endl;
+
+    //Precision
+    std::cout << std::setprecision(20);//Control the precision from std::cout
+    std::cout << "num1 is: " << num1 << std::endl;//7 digits
+    std::cout << "num2 is: " << num2 << std::endl;//15 digits
+    std::cout << "num3 is: " << num3 << std::endl;//15+ digits
+    std::cout << "num4 is: " << num4 << std::endl;
+
+    std::cout << "======================================================" << std::endl;
+
+    std::cout << "num5 is: " << num5 << std::endl;
+    std::cout << "num6 is: " << num6 << std::endl;
+    std::cout << "num7 is: " << num7 << std::endl;
+    std::cout << "num8 is: " << num8 << std::endl;
+    std::cout << "num9 is: " << num9 << std::endl;
+
+    std::cout << "======================================================" << std::endl;
+
+    std::cout << num10 << "/" << num11 << " yields " << result << std::endl;
+    std::cout << result << " + " << num10 << " yields " << result + num10 << std::endl;
+    //NaN
+    result = num11/num12;
+    std::cout << num11 << "/" << num12 << " = " << result << std::endl;
 
     return 0;
 }
