@@ -3,7 +3,7 @@
     "tasks": [
         {
             "type": "cppbuild",
-            "label": "Buld with GCC",
+            "label": "Build with GCC",
             "command": "C:\\Users\\Alex\\Desktop\\mingw64\\bin\\g++.exe",
             "args": [
                 "-g",
